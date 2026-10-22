@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>AI Asistan v5.0 Ultimate</title>
+<title>AI Asistan v5.1 Ultimate</title>
 <meta name="theme-color" content="#161b22">
 <link rel="manifest" href='data:application/manifest+json,{"name":"AI Asistan","short_name":"AI","start_url":".","display":"standalone","background_color":"#0d1117","theme_color":"#161b22","icons":[{"src":"https://cdn-icons-png.flaticon.com/512/4712/4712035.png","sizes":"512x512","type":"image/png"}]}'>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
@@ -645,7 +645,7 @@ textarea::placeholder { color: var(--tx3); }
 <!-- BAŞLIK -->
 <header class="header">
   <button type="button" class="btn-icon" onclick="toggleSidebar(event)" style="display:none;" id="menuBtn">☰</button>
-  <div class="logo">🤖 AI Asistan <span class="badge">v5.0</span></div>
+  <div class="logo">🤖 AI Asistan <span class="badge">v5.1</span></div>
   <div class="header-actions">
     <button type="button" class="btn-icon" onclick="toggleTheme(event)" title="Tema Değiştir">🌓</button>
     <button type="button" class="btn-icon" onclick="openModal(event, 'modalSettings')" title="Ayarlar">⚙️</button>
@@ -682,7 +682,7 @@ textarea::placeholder { color: var(--tx3); }
     <div class="chat-header">
       <div>
         <div class="chat-title" id="currentChatTitle">Yeni Sohbet</div>
-        <div class="chat-subtitle" id="currentChatMeta">Gemini 2.0 Flash</div>
+        <div class="chat-subtitle" id="currentChatMeta">Gemini 3.8 Flash</div>
       </div>
       <div style="margin-left:auto; display:flex; gap:8px;">
         <button type="button" class="btn-icon" onclick="exportChat(event)" title="Markdown Olarak İndir">📤</button>
@@ -851,7 +851,7 @@ const DEFAULT_PROMPTS = [
 let State = {
   settings: { 
     provider: 'gemini', 
-    model: 'gemini-2.0-flash', 
+    model: 'gemini-3.8-flash', // GÜNCELLENDİ
     key: EMBEDDED_KEY, 
     ctx: 10, 
     temp: 0.7, 
@@ -870,9 +870,9 @@ let State = {
 
 // Token Fiyatlandırma (Maliyet hesabı için)
 const PRICES = {
-  'gemini-2.0-flash': { in: 0.10, out: 0.40 },
-  'gemini-1.5-flash': { in: 0.075, out: 0.30 },
-  'gemini-1.5-pro': { in: 1.25, out: 5.00 },
+  'gemini-3.8-flash': { in: 0.10, out: 0.40 },
+  'gemini-3.6-flash': { in: 0.075, out: 0.30 },
+  'gemini-3.5-flash-lite': { in: 0.0375, out: 0.15 },
   'gpt-4o-mini': { in: 0.15, out: 0.60 },
   'gpt-4o': { in: 2.50, out: 10.00 }
 };
@@ -892,6 +892,11 @@ function init() {
       State.activeChatId = parsed.activeChatId;
     }
     
+    // Eski model adı kayıtlıysa yenisini ata
+    if (State.settings.model === 'gemini-2.0-flash' || State.settings.model === 'gemini-2.0-flash-exp') {
+      State.settings.model = 'gemini-3.8-flash';
+    }
+
     if (!State.settings.key) State.settings.key = EMBEDDED_KEY;
     if (localStorage.getItem(K.theme) === 'light') document.documentElement.classList.add('light');
     
@@ -1618,7 +1623,7 @@ function updateModelList(e) {
   const prov = document.getElementById('setProv').value;
   const sel = document.getElementById('setModel');
   const models = {
-    gemini: ['gemini-2.0-flash', 'gemini-2.0-flash-lite', 'gemini-1.5-flash', 'gemini-1.5-pro'],
+    gemini: ['gemini-3.8-flash', 'gemini-3.6-flash', 'gemini-3.5-flash-lite'],
     openai: ['gpt-4o-mini', 'gpt-4o']
   };
   sel.innerHTML = models[prov].map(m => `<option value="${m}" ${State.settings.model===m?'selected':''}>${m}</option>`).join('');
@@ -1758,4 +1763,4 @@ document.addEventListener('keydown', (e) => {
 window.addEventListener('DOMContentLoaded', init);
 </script>
 </body>
-</html>
+   </html> 
