@@ -22,7 +22,6 @@ html.light{
 html,body{height:100%;margin:0}
 body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg0);color:var(--tx);overflow:hidden;font-size:15px}
 .app{display:grid;grid-template-columns:290px 1fr;height:100dvh;overflow:hidden}
-/* SIDEBAR */
 .sidebar{background:var(--bg1);border-right:1px solid var(--line);display:flex;flex-direction:column;overflow:hidden}
 .sb-head{padding:12px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:8px}
 .sb-logo{font-family:Georgia,serif;font-weight:bold;font-size:17px;color:var(--gold);flex:1;letter-spacing:.5px}
@@ -42,7 +41,6 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg0);color:var
 .sb-foot{padding:10px 12px;border-top:1px solid var(--line);display:flex;gap:6px}
 .sb-foot button{flex:1;background:var(--bg2);color:var(--tx);border:1px solid var(--line);border-radius:6px;padding:8px;font-size:12px;cursor:pointer}
 .sb-foot button:hover{background:var(--bg4)}
-/* MAIN */
 .main{display:flex;flex-direction:column;background:var(--bg0);overflow:hidden}
 .m-head{background:var(--bg1);border-bottom:1px solid var(--line);padding:10px 14px;display:flex;align-items:center;gap:10px;min-height:56px}
 .m-title{flex:1;font-size:15px;font-weight:600;color:var(--tx0);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
@@ -51,7 +49,6 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg0);color:var
 .m-actions button{background:none;border:1px solid var(--line);color:var(--tx2);border-radius:6px;padding:6px 9px;font-size:12px;cursor:pointer}
 .m-actions button:hover{background:var(--bg2);color:var(--tx0)}
 .hamb{display:none;background:none;border:none;color:var(--tx);font-size:22px;cursor:pointer;padding:4px 8px}
-/* MESSAGES */
 .messages{flex:1;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:12px;scroll-behavior:smooth}
 .msg{max-width:min(860px,92%);padding:11px 14px;border-radius:10px;line-height:1.55;font-size:14px;word-wrap:break-word;white-space:pre-wrap}
 .msg.user{align-self:flex-end;background:var(--user);color:var(--tx0);border-bottom-right-radius:3px}
@@ -63,7 +60,6 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg0);color:var
 .msg-role .acts button:hover{background:var(--bg3);color:var(--tx0)}
 .msg.err{border-color:var(--bad)}
 .msg.err .msg-content{color:var(--bad)}
-/* code */
 .msg pre{background:var(--bg3);border:1px solid var(--line);border-radius:6px;padding:10px;overflow-x:auto;font-size:12.5px;margin:8px 0;font-family:'SF Mono',Consolas,monospace;line-height:1.45}
 .msg code{background:var(--bg3);padding:1px 5px;border-radius:3px;font-size:12.5px;font-family:'SF Mono',Consolas,monospace;color:var(--gold)}
 .msg pre code{background:none;padding:0;color:var(--tx)}
@@ -78,13 +74,11 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg0);color:var
 .cb-head+pre{margin-top:0;border-radius:0 0 6px 6px}
 .cb-head button{background:none;border:1px solid var(--line);color:var(--tx2);border-radius:4px;padding:2px 8px;font-size:11px;cursor:pointer}
 .cb-head button:hover{color:var(--tx0);border-color:var(--gold)}
-/* ATTACH */
 .attach-bar{background:var(--bg1);border-top:1px solid var(--line);padding:8px 14px;display:flex;flex-wrap:wrap;gap:6px;max-height:120px;overflow-y:auto}
 .attach-chip{background:var(--bg3);border:1px solid var(--line);border-radius:14px;padding:4px 10px;font-size:12px;display:flex;align-items:center;gap:6px;color:var(--tx2)}
 .attach-chip b{color:var(--tx0);font-weight:600}
 .attach-chip .del{background:none;border:none;color:var(--tx3);cursor:pointer;font-size:14px;padding:0 2px}
 .attach-chip .del:hover{color:var(--bad)}
-/* COMPOSER */
 .composer{background:var(--bg1);border-top:1px solid var(--line);padding:10px 14px 14px;display:flex;flex-direction:column;gap:6px}
 .comp-row{display:flex;gap:6px;align-items:flex-end}
 .comp-ta{flex:1;resize:none;background:var(--bg3);color:var(--tx);border:1px solid var(--line);border-radius:8px;padding:10px 12px;font-size:15px;font-family:inherit;min-height:44px;max-height:180px;line-height:1.4}
@@ -97,7 +91,6 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg0);color:var
 .comp-tools button:hover{color:var(--tx0);border-color:var(--gold)}
 .comp-tools .info{margin-left:auto}
 .comp-tools .info.bad{color:var(--warn)}
-/* MODAL */
 .modal{position:fixed;inset:0;background:rgba(0,0,0,.7);display:flex;align-items:center;justify-content:center;z-index:60;padding:14px;overflow-y:auto}
 .modal .box{background:var(--bg1);border:1px solid var(--line);border-radius:12px;padding:16px;max-width:560px;width:100%;max-height:90vh;overflow-y:auto}
 .modal h2{margin:0 0 12px;font-size:16px;color:var(--gold)}
@@ -113,25 +106,20 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg0);color:var
 .presets button{background:var(--bg2);border:1px solid var(--line);color:var(--tx);border-radius:6px;padding:8px;font-size:12px;cursor:pointer;text-align:left}
 .presets button:hover{border-color:var(--gold);background:var(--bg4)}
 .presets button.on{border-color:var(--gold);background:var(--bg4);color:var(--gold)}
-/* TOAST */
 #toasts{position:fixed;right:12px;bottom:12px;display:flex;flex-direction:column;gap:6px;z-index:70;max-width:calc(100vw - 24px)}
 .toast{background:var(--bg1);border:1px solid var(--line);border-left:3px solid var(--blue);padding:10px 14px;border-radius:6px;font-size:13px;box-shadow:0 4px 14px rgba(0,0,0,.4);animation:slideIn .2s}
 .toast.ok{border-left-color:var(--ok)}.toast.bad{border-left-color:var(--bad)}.toast.warn{border-left-color:var(--warn)}
 @keyframes slideIn{from{transform:translateX(30px);opacity:0}to{transform:none;opacity:1}}
-/* DROP ZONE */
 .drop-overlay{position:fixed;inset:0;background:rgba(227,10,23,.15);border:3px dashed var(--gold);z-index:80;pointer-events:none;display:flex;align-items:center;justify-content:center;font-size:22px;color:var(--gold);font-weight:600}
-/* EMPTY */
 .empty-state{text-align:center;padding:60px 20px;color:var(--tx3);max-width:500px;margin:0 auto}
 .empty-state h2{color:var(--gold);font-size:22px;margin:0 0 8px}
 .empty-state .ex{background:var(--bg1);border:1px solid var(--line);border-radius:8px;padding:10px 14px;margin:8px 0;font-size:13px;text-align:left;cursor:pointer;transition:border-color .15s}
 .empty-state .ex:hover{border-color:var(--gold)}
 .empty-state .ex b{color:var(--blue);display:block;margin-bottom:2px;font-size:12px}
-/* SCROLLBAR */
 *::-webkit-scrollbar{width:8px;height:8px}
 *::-webkit-scrollbar-track{background:transparent}
 *::-webkit-scrollbar-thumb{background:var(--line);border-radius:4px}
 *::-webkit-scrollbar-thumb:hover{background:var(--tx3)}
-/* MOBILE */
 .overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:39}
 @media(max-width:768px){
   .app{grid-template-columns:1fr}
@@ -149,9 +137,7 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg0);color:var
 <body>
 <div class="app" id="app">
   <aside class="sidebar" id="sidebar">
-    <div class="sb-head">
-      <div class="sb-logo">🤖 AI Asistan</div>
-    </div>
+    <div class="sb-head"><div class="sb-logo">🤖 AI Asistan</div></div>
     <div class="sb-search"><input id="convSearch" placeholder="Sohbetlerde ara…"></div>
     <div class="sb-list" id="convList"></div>
     <div class="sb-foot">
@@ -160,7 +146,6 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg0);color:var
     </div>
   </aside>
   <div class="overlay" id="overlay"></div>
-
   <main class="main">
     <header class="m-head">
       <button class="hamb" id="hamb">☰</button>
@@ -173,14 +158,11 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg0);color:var
         <button data-act="clearChat" title="Sohbeti temizle">🧹</button>
       </div>
     </header>
-
     <div class="messages" id="messages"></div>
-
     <div class="attach-bar" id="attachBar" style="display:none"></div>
-
     <div class="composer">
       <div class="comp-row">
-        <button class="comp-tools-btn" style="background:var(--bg2);border:1px solid var(--line);color:var(--tx);border-radius:8px;padding:0 14px;min-height:44px;cursor:pointer;font-size:18px" id="attachBtn" title="Dosya ekle">📎</button>
+        <button style="background:var(--bg2);border:1px solid var(--line);color:var(--tx);border-radius:8px;padding:0 14px;min-height:44px;cursor:pointer;font-size:18px" id="attachBtn" title="Dosya ekle">📎</button>
         <textarea class="comp-ta" id="ta" placeholder="Mesaj yaz… (Enter = gönder, Shift+Enter = yeni satır)" rows="1"></textarea>
         <button class="comp-btn" id="sendBtn">Gönder</button>
       </div>
@@ -191,7 +173,6 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg0);color:var
     </div>
   </main>
 </div>
-
 <div id="modalRoot"></div>
 <div id="toasts"></div>
 <input type="file" id="fileInput" multiple accept=".txt,.md,.js,.ts,.jsx,.tsx,.html,.css,.json,.yml,.yaml,.py,.sql,.xml,.csv" style="display:none">
@@ -200,9 +181,11 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg0);color:var
 'use strict';
 /* ============ SABİTLER ============ */
 const $ = id => document.getElementById(id);
-const K = {
-  convs:'aih_convs', settings:'aih_settings', active:'aih_active', theme:'aih_theme'
-};
+
+/* ---- GÖMÜLÜ API ANAHTARI ---- */
+const EMBEDDED_KEY = 'AQ.Ab8RN6KTOG0Zoo--lzgyBhiXPP7zq4NVb8m8Mg3J8hE-lmMlxw';
+
+const K = { convs:'aih_convs', settings:'aih_settings', active:'aih_active', theme:'aih_theme' };
 const MODELS = {
   gemini:['gemini-2.0-flash-exp','gemini-1.5-flash','gemini-1.5-pro','gemini-1.5-flash-8b'],
   openai:['gpt-4o-mini','gpt-4o','gpt-4-turbo']
@@ -211,7 +194,6 @@ const PROVIDERS = { gemini:'Google Gemini', openai:'OpenAI' };
 const MAX_FILE_BYTES = 500*1024;
 const MAX_TOTAL_BYTES = 2*1024*1024;
 
-/* ============ PRESETLER ============ */
 const PRESETS = {
   general:{ n:'💬 Genel', s:
 `Sen yardımcı bir yapay zekâ asistanısın. Türkçe, kısa ve net cevap ver.
@@ -263,19 +245,19 @@ Cevap kuralların:
 - Emin değilsen "bilmiyorum" de.`}
 };
 
-/* ============ DURUM ============ */
 const S = {
-  convs: [],           // {id, title, msgs:[{role,content,t}], created, updated}
+  convs: [],
   activeId: null,
-  attachments: [],     // {name, content, size}
+  attachments: [],
   settings: {
-    provider:'gemini', key:'', model:'gemini-2.0-flash-exp',
+    provider:'gemini',
+    key: EMBEDDED_KEY,        // ← gömülü
+    model:'gemini-2.0-flash-exp',
     temp:0.7, maxTokens:2048, preset:'general', systemPrompt:PRESETS.general.s
   },
   busy: false, error:'', lastUserMsg:''
 };
 
-/* ============ KAYIT/YÜKLEME ============ */
 function loadAll(){
   try{
     const c = JSON.parse(localStorage.getItem(K.convs)||'[]');
@@ -284,7 +266,8 @@ function loadAll(){
   try{
     const s = JSON.parse(localStorage.getItem(K.settings)||'null');
     if(s) Object.assign(S.settings, s);
-  }catch(e){}
+    if(!S.settings.key) S.settings.key = EMBEDDED_KEY;   // anahtar boşsa gömülüyü kullan
+  }catch(e){ S.settings.key = EMBEDDED_KEY; }
   S.activeId = localStorage.getItem(K.active) || null;
   if(!S.convs.find(x=>x.id===S.activeId)) S.activeId = S.convs[0]?.id || null;
 }
@@ -292,7 +275,6 @@ function saveConvs(){ try{ localStorage.setItem(K.convs, JSON.stringify(S.convs)
 function saveSettings(){ try{ localStorage.setItem(K.settings, JSON.stringify(S.settings)); }catch(e){} }
 function saveActive(){ try{ localStorage.setItem(K.active, S.activeId||''); }catch(e){} }
 
-/* ============ YARDIMCILAR ============ */
 const esc = s => String(s).replace(/[&<>"']/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const uid = () => Date.now().toString(36)+Math.random().toString(36).slice(2,7);
 const fmtBytes = n => n<1024?n+' B':n<1024*1024?(n/1024).toFixed(1)+' KB':(n/1024/1024).toFixed(2)+' MB';
@@ -311,16 +293,12 @@ function setTitleFromFirst(c, text){
   c.title = t || 'Yeni Sohbet';
 }
 
-/* ============ MARKDOWN ============ */
 function md(src){
   if(!src) return '';
   let h = src;
   h = h.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
   const cb = [];
-  h = h.replace(/```(\w*)\n([\s\S]*?)```/g, (_,lang,code)=>{
-    const i = cb.length; cb.push({lang,code});
-    return '\u0000CB'+i+'\u0000';
-  });
+  h = h.replace(/```(\w*)\n([\s\S]*?)```/g, (_,lang,code)=>{ const i=cb.length; cb.push({lang,code}); return '\u0000CB'+i+'\u0000'; });
   h = h.replace(/`([^`\n]+)`/g, '<code>$1</code>');
   h = h.replace(/^###### (.*)$/gm,'<h6>$1</h6>');
   h = h.replace(/^##### (.*)$/gm,'<h5>$1</h5>');
@@ -331,17 +309,14 @@ function md(src){
   h = h.replace(/\*\*([^*\n]+)\*\*/g,'<strong>$1</strong>');
   h = h.replace(/(?<!\*)\*([^*\n]+)\*(?!\*)/g,'<em>$1</em>');
   h = h.replace(/\[([^\]]+)\]\(([^)]+)\)/g,'<a href="$2" target="_blank" rel="noopener">$1</a>');
-  // lists
   h = h.replace(/^[-*] (.*)$/gm,'<li>$1</li>');
   h = h.replace(/(?:^|\n)((?:<li>.*<\/li>\n?)+)/g, (m,lis)=>'\n<ul>'+lis+'</ul>\n');
   h = h.replace(/^\d+\. (.*)$/gm,'<oli>$1</oli>');
   h = h.replace(/(?:^|\n)((?:<oli>.*<\/oli>\n?)+)/g,(m,lis)=>'\n<ol>'+lis.replace(/<\/?oli>/g,x=>x.replace('oli','li'))+'</ol>\n');
-  // paragraphs
   h = h.split(/\n\n+/).map(p=>{
     if(/^\s*<(ul|ol|h\d|pre|div)/.test(p) || /^\u0000CB/.test(p)) return p;
     return '<p>'+p.replace(/\n/g,'<br>')+'</p>';
   }).join('\n');
-  // restore code
   cb.forEach((b,i)=>{
     const code = b.code.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
     const id = 'cb_'+Math.random().toString(36).slice(2,9);
@@ -353,10 +328,9 @@ function md(src){
 document.addEventListener('click', e=>{
   const b = e.target.closest('.cb-copy'); if(!b) return;
   const pre = document.getElementById(b.dataset.cbid);
-  if(pre){ navigator.clipboard.writeText(pre.textContent).then(()=>toast('Kod kopyalandı','ok')); }
+  if(pre) navigator.clipboard.writeText(pre.textContent).then(()=>toast('Kod kopyalandı','ok'));
 });
 
-/* ============ SAĞLAYICILAR ============ */
 async function callAI(messages){
   const s = S.settings;
   if(!s.key) throw new Error('API anahtarı gerekli (⚙️ Ayarlar).');
@@ -365,17 +339,13 @@ async function callAI(messages){
     const url = `https://generativelanguage.googleapis.com/v1beta/models/${s.model}:generateContent?key=${encodeURIComponent(s.key)}`;
     const body = {
       systemInstruction:{parts:[{text:sys}]},
-      contents: messages.map(m=>({
-        role: m.role==='assistant'?'model':'user',
-        parts:[{text:m.content}]
-      })),
+      contents: messages.map(m=>({ role: m.role==='assistant'?'model':'user', parts:[{text:m.content}] })),
       generationConfig:{temperature:+s.temp, maxOutputTokens:+s.maxTokens}
     };
     const r = await fetch(url,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});
     const j = await r.json();
     if(j.error) throw new Error(j.error.message||'Gemini hatası');
-    const parts = (j.candidates?.[0]?.content?.parts||[]);
-    const text = parts.map(p=>p.text||'').join('');
+    const text = ((j.candidates?.[0]?.content?.parts)||[]).map(p=>p.text||'').join('');
     if(!text) throw new Error('Yanıt boş (güvenlik filtresi olabilir).');
     return text;
   }
@@ -393,7 +363,6 @@ async function callAI(messages){
   throw new Error('Sağlayıcı seçilmedi');
 }
 
-/* ============ GÖNDER ============ */
 async function send(){
   if(S.busy) return;
   const ta = $('ta');
@@ -401,21 +370,16 @@ async function send(){
   if(!text && !S.attachments.length) return;
   if(!S.settings.key) return openSettings();
 
-  // Mesaj içeriğine dosyaları ekle
   let full = text;
   if(S.attachments.length){
-    const parts = S.attachments.map(a=>
-      `--- DOSYA: ${a.name} (${fmtBytes(a.size)}) ---\n\`\`\`\n${a.content}\n\`\`\``
-    );
+    const parts = S.attachments.map(a=>`--- DOSYA: ${a.name} (${fmtBytes(a.size)}) ---\n\`\`\`\n${a.content}\n\`\`\``);
     full = parts.join('\n\n') + '\n\n' + (text || 'Yukarıdaki dosya(lar)ı analiz et.');
   }
-
   S.lastUserMsg = full;
   const c = activeConv() || newConv();
   c.msgs.push({role:'user', content:full, t:Date.now()});
   c.updated = Date.now();
   setTitleFromFirst(c, text || (S.attachments[0]?.name||''));
-  // ekleri temizle
   S.attachments = [];
   renderAttachments();
   ta.value = '';
@@ -424,8 +388,7 @@ async function send(){
   saveConvs();
   renderMessages();
   S.busy = true; S.error = '';
-  renderHeader();
-  updateSendBtn();
+  renderHeader(); updateSendBtn();
 
   try{
     const history = c.msgs.filter(m=>m.role==='user'||m.role==='assistant').map(m=>({role:m.role,content:m.content}));
@@ -439,143 +402,73 @@ async function send(){
     saveConvs();
   }
   S.busy = false;
-  renderMessages();
-  renderHeader();
-  updateSendBtn();
+  renderMessages(); renderHeader(); updateSendBtn();
   toast(S.error?'Hata':'Yanıt geldi', S.error?'bad':'ok');
 }
 
-/* ============ RENDER ============ */
 function renderSidebar(){
   const q = ($('convSearch').value||'').toLowerCase();
   const list = S.convs.filter(c=>!q || c.title.toLowerCase().includes(q) || c.msgs.some(m=>m.content.toLowerCase().includes(q)));
   const box = $('convList');
-  if(!list.length){
-    box.innerHTML = '<div class="sb-empty">'+(q?'Sonuç yok':'Henüz sohbet yok')+'</div>';
-    return;
-  }
-  box.innerHTML = list.map(c=>`
-    <div class="conv ${c.id===S.activeId?'active':''}" data-cid="${c.id}">
-      <span class="conv-title">${esc(c.title)}</span>
-      <button class="conv-del" data-del="${c.id}" title="Sil">✕</button>
-    </div>
-  `).join('');
+  if(!list.length){ box.innerHTML = '<div class="sb-empty">'+(q?'Sonuç yok':'Henüz sohbet yok')+'</div>'; return; }
+  box.innerHTML = list.map(c=>`<div class="conv ${c.id===S.activeId?'active':''}" data-cid="${c.id}"><span class="conv-title">${esc(c.title)}</span><button class="conv-del" data-del="${c.id}" title="Sil">✕</button></div>`).join('');
 }
 function renderHeader(){
   const c = activeConv();
   $('mTitle').textContent = c?c.title:'Yeni Sohbet';
   $('mMeta').textContent = `${PROVIDERS[S.settings.provider]||''} · ${S.settings.model||''}`;
   $('regenBtn').style.display = c && c.msgs.some(m=>m.role==='assistant') ? '' : 'none';
-  // token info
   const total = estTokens(activeConv()?.msgs.map(m=>m.content).join('\n')||'') + S.attachments.reduce((a,b)=>a+estTokens(b.content),0);
   const el = $('tokenInfo');
-  if(total>0){
-    el.textContent = `≈ ${fmtNum(total)} token`;
-    el.className = 'info'+(total>100000?' bad':'');
-  } else el.textContent = '';
+  if(total>0){ el.textContent = `≈ ${fmtNum(total)} token`; el.className = 'info'+(total>100000?' bad':''); }
+  else el.textContent = '';
 }
 function renderMessages(){
-  const c = activeConv();
-  const box = $('messages');
-  if(!c || !c.msgs.length){
-    box.innerHTML = emptyState();
-    return;
-  }
+  const c = activeConv(); const box = $('messages');
+  if(!c || !c.msgs.length){ box.innerHTML = emptyState(); return; }
   box.innerHTML = c.msgs.map((m,i)=>{
-    if(m.role==='user'){
-      return `<div class="msg user">
-        <div class="msg-role">👤 Sen
-          <span class="acts">
-            <button data-act="copyMsg" data-i="${i}" title="Kopyala">📋</button>
-            <button data-act="delMsg" data-i="${i}" title="Sil">🗑️</button>
-          </span>
-        </div>
-        <div class="msg-content">${esc(m.content)}</div>
-      </div>`;
-    }
-    if(m.role==='assistant'){
-      return `<div class="msg ai ${m.err?'err':''}">
-        <div class="msg-role">🤖 Asistan
-          <span class="acts">
-            <button data-act="copyMsg" data-i="${i}" title="Kopyala">📋</button>
-            <button data-act="delMsg" data-i="${i}" title="Sil">🗑️</button>
-          </span>
-        </div>
-        <div class="msg-content">${md(m.content)}</div>
-      </div>`;
-    }
+    if(m.role==='user') return `<div class="msg user"><div class="msg-role">👤 Sen<span class="acts"><button data-act="copyMsg" data-i="${i}" title="Kopyala">📋</button><button data-act="delMsg" data-i="${i}" title="Sil">🗑️</button></span></div><div class="msg-content">${esc(m.content)}</div></div>`;
+    if(m.role==='assistant') return `<div class="msg ai ${m.err?'err':''}"><div class="msg-role">🤖 Asistan<span class="acts"><button data-act="copyMsg" data-i="${i}" title="Kopyala">📋</button><button data-act="delMsg" data-i="${i}" title="Sil">🗑️</button></span></div><div class="msg-content">${md(m.content)}</div></div>`;
     return `<div class="msg sys">${esc(m.content)}</div>`;
   }).join('') + (S.busy?`<div class="msg ai"><div class="msg-role">🤖 Asistan</div><div class="msg-content"><span class="dim">Yazıyor…</span></div></div>`:'');
-  // scroll bottom
   box.scrollTop = box.scrollHeight;
 }
 function emptyState(){
-  return `<div class="empty-state">
-    <h2>🤖 Merhaba!</h2>
-    <p>Ben senin yapay zekâ asistanınım. Sohbet et, kod yazdır, hata ayıkla, dosya incele.</p>
-    <div class="ex" data-ex="Şu an ne yapmalıyım? Bana adım adım plan ver."><b>Örnek 1</b>Şu an ne yapmalıyım? Bana adım adım plan ver.</div>
-    <div class="ex" data-ex="Aşağıdaki kodda hata var mı? Düzelt: "><b>Örnek 2</b>Bu kodda hata var mı? Düzelt:</div>
-    <div class="ex" data-ex="Bir JavaScript fonksiyonu yaz: verilen dizideki çift sayıları döndürsün."><b>Örnek 3</b>Bir JavaScript fonksiyonu yaz: verilen dizideki çift sayıları döndürsün.</div>
-    <p style="margin-top:16px;font-size:12px">⚙️ Ayarlar'dan API anahtarını gir → kullanmaya başla.</p>
-  </div>`;
+  return `<div class="empty-state"><h2>🤖 Merhaba!</h2><p>Ben senin yapay zekâ asistanınım. Sohbet et, kod yazdır, hata ayıkla, dosya incele.</p><div class="ex" data-ex="Şu an ne yapmalıyım? Bana adım adım plan ver."><b>Örnek 1</b>Şu an ne yapmalıyım? Adım adım plan ver.</div><div class="ex" data-ex="Aşağıdaki kodda hata var mı? Düzelt: "><b>Örnek 2</b>Bu kodda hata var mı? Düzelt:</div><div class="ex" data-ex="Bir JavaScript fonksiyonu yaz: verilen dizideki çift sayıları döndürsün."><b>Örnek 3</b>JavaScript fonksiyonu yaz: çift sayıları döndürsün.</div><p style="margin-top:16px;font-size:12px">API anahtarı gömülü — hemen kullanmaya başla!</p></div>`;
 }
 function renderAttachments(){
   const bar = $('attachBar');
   if(!S.attachments.length){ bar.style.display='none'; bar.innerHTML=''; return; }
   bar.style.display='flex';
-  bar.innerHTML = S.attachments.map((a,i)=>`
-    <div class="attach-chip">
-      📄 <b>${esc(a.name)}</b> <span style="color:var(--tx3)">${fmtBytes(a.size)}</span>
-      <button class="del" data-attach-del="${i}" title="Kaldır">✕</button>
-    </div>
-  `).join('');
+  bar.innerHTML = S.attachments.map((a,i)=>`<div class="attach-chip">📄 <b>${esc(a.name)}</b> <span style="color:var(--tx3)">${fmtBytes(a.size)}</span><button class="del" data-attach-del="${i}" title="Kaldır">✕</button></div>`).join('');
 }
-function updateSendBtn(){
-  $('sendBtn').disabled = S.busy || (!$('ta').value.trim() && !S.attachments.length);
-}
-function autoResize(){
-  const ta = $('ta');
-  ta.style.height = 'auto';
-  ta.style.height = Math.min(ta.scrollHeight, 180) + 'px';
-}
+function updateSendBtn(){ $('sendBtn').disabled = S.busy || (!$('ta').value.trim() && !S.attachments.length); }
+function autoResize(){ const ta=$('ta'); ta.style.height='auto'; ta.style.height=Math.min(ta.scrollHeight,180)+'px'; }
 
-/* ============ AYARLAR MODAL ============ */
 function openSettings(){
   const s = S.settings;
   const models = MODELS[s.provider]||[];
   const mr = $('modalRoot');
-  mr.innerHTML = `<div class="modal" data-close="1">
-    <div class="box">
-      <h2>⚙️ Ayarlar</h2>
-      <label>Sağlayıcı</label>
-      <select id="setProv">${Object.keys(PROVIDERS).map(k=>`<option value="${k}" ${s.provider===k?'selected':''}>${PROVIDERS[k]}</option>`).join('')}</select>
-      <label>Model</label>
-      <select id="setModel">${models.map(m=>`<option value="${m}" ${s.model===m?'selected':''}>${m}</option>`).join('')}</select>
-      <label>API Anahtarı</label>
-      <input type="password" id="setKey" value="${esc(s.key)}" placeholder="AIza... (Gemini) / sk-... (OpenAI)" autocomplete="off">
-      <p class="hint">
-        <b>Ücretsiz Gemini:</b> <a href="https://aistudio.google.com/app/apikey" target="_blank">aistudio.google.com/app/apikey</a> → "Create API key"<br>
-        <b>OpenAI (ücretli):</b> <a href="https://platform.openai.com/api-keys" target="_blank">platform.openai.com/api-keys</a>
-      </p>
-      <label>Sistem Prompt (rol)</label>
-      <div class="presets" id="presets">${Object.keys(PRESETS).map(k=>`<button data-preset="${k}" class="${s.preset===k?'on':''}">${PRESETS[k].n}</button>`).join('')}</div>
-      <textarea id="setSys" style="margin-top:8px">${esc(s.systemPrompt)}</textarea>
-      <label>Sıcaklık (0 = tutarlı, 1 = yaratıcı): ${s.temp}</label>
-      <input type="range" id="setTemp" min="0" max="1" step="0.05" value="${s.temp}" style="padding:0">
-      <label>Maks. Yanıt Token</label>
-      <input type="number" id="setMax" value="${s.maxTokens}" min="256" max="8192" step="256">
-      <div class="btns">
-        <button data-close="1">İptal</button>
-        <button class="primary" id="saveSettings">💾 Kaydet</button>
-      </div>
-    </div>
-  </div>`;
-  // bind
-  $('setProv').addEventListener('change', ()=>{
-    const p = $('setProv').value;
-    $('setModel').innerHTML = MODELS[p].map(m=>`<option>${m}</option>`).join('');
-  });
-  $('setTemp').addEventListener('input', ()=>{ $('setTemp').previousElementSibling.textContent = 'Sıcaklık (0 = tutarlı, 1 = yaratıcı): '+$('setTemp').value; });
+  mr.innerHTML = `<div class="modal" data-close="1"><div class="box">
+    <h2>⚙️ Ayarlar</h2>
+    <label>Sağlayıcı</label>
+    <select id="setProv">${Object.keys(PROVIDERS).map(k=>`<option value="${k}" ${s.provider===k?'selected':''}>${PROVIDERS[k]}</option>`).join('')}</select>
+    <label>Model</label>
+    <select id="setModel">${models.map(m=>`<option value="${m}" ${s.model===m?'selected':''}>${m}</option>`).join('')}</select>
+    <label>API Anahtarı (gömülü)</label>
+    <input type="password" id="setKey" value="${esc(s.key)}" placeholder="AIza... / AQ..." autocomplete="off">
+    <p class="hint"><b>Ücretsiz Gemini:</b> <a href="https://aistudio.google.com/app/apikey" target="_blank">aistudio.google.com/app/apikey</a><br><b>OpenAI (ücretli):</b> <a href="https://platform.openai.com/api-keys" target="_blank">platform.openai.com/api-keys</a></p>
+    <label>Sistem Prompt (rol)</label>
+    <div class="presets" id="presets">${Object.keys(PRESETS).map(k=>`<button data-preset="${k}" class="${s.preset===k?'on':''}">${PRESETS[k].n}</button>`).join('')}</div>
+    <textarea id="setSys" style="margin-top:8px">${esc(s.systemPrompt)}</textarea>
+    <label>Sıcaklık: ${s.temp}</label>
+    <input type="range" id="setTemp" min="0" max="1" step="0.05" value="${s.temp}" style="padding:0">
+    <label>Maks. Yanıt Token</label>
+    <input type="number" id="setMax" value="${s.maxTokens}" min="256" max="8192" step="256">
+    <div class="btns"><button data-close="1">İptal</button><button class="primary" id="saveSettings">💾 Kaydet</button></div>
+  </div></div>`;
+  $('setProv').addEventListener('change', ()=>{ const p=$('setProv').value; $('setModel').innerHTML = MODELS[p].map(m=>`<option>${m}</option>`).join(''); });
+  $('setTemp').addEventListener('input', ()=>{ $('setTemp').previousElementSibling.textContent = 'Sıcaklık: '+$('setTemp').value; });
   $('presets').addEventListener('click', e=>{
     const b = e.target.closest('[data-preset]'); if(!b) return;
     document.querySelectorAll('#presets button').forEach(x=>x.classList.toggle('on', x===b));
@@ -590,85 +483,51 @@ function openSettings(){
     S.settings.preset = $('setSys').dataset.preset || 'custom';
     S.settings.temp = +$('setTemp').value;
     S.settings.maxTokens = +$('setMax').value;
-    saveSettings();
-    closeModal();
-    toast('✅ Ayarlar kaydedildi','ok');
-    renderHeader();
+    saveSettings(); closeModal(); toast('✅ Ayarlar kaydedildi','ok'); renderHeader();
   });
 }
 function closeModal(){ $('modalRoot').innerHTML=''; }
 
-/* ============ DOSYA YÜKLEME ============ */
 async function addFiles(files){
   for(const f of Array.from(files)){
     if(f.size>MAX_FILE_BYTES){ toast(`"${f.name}" çok büyük (max ${fmtBytes(MAX_FILE_BYTES)})`,'bad'); continue; }
     const total = S.attachments.reduce((a,b)=>a+b.size,0) + f.size;
     if(total>MAX_TOTAL_BYTES){ toast('Toplam boyut sınırı aşıldı','bad'); break; }
-    try{
-      const text = await f.text();
-      S.attachments.push({name:f.name, content:text, size:f.size});
-    }catch(e){ toast('"'+f.name+'" okunamadı','bad'); }
+    try{ const text = await f.text(); S.attachments.push({name:f.name, content:text, size:f.size}); }
+    catch(e){ toast('"'+f.name+'" okunamadı','bad'); }
   }
-  renderAttachments();
-  updateSendBtn();
-  renderHeader();
+  renderAttachments(); updateSendBtn(); renderHeader();
   toast(`${files.length} dosya eklendi`,'ok');
 }
 
-/* ============ TOAST ============ */
 function toast(msg, kind){
-  const t = document.createElement('div');
-  t.className = 'toast '+(kind||'');
-  t.textContent = msg;
-  $('toasts').appendChild(t);
-  setTimeout(()=>t.remove(), 3800);
+  const t = document.createElement('div'); t.className = 'toast '+(kind||''); t.textContent = msg;
+  $('toasts').appendChild(t); setTimeout(()=>t.remove(), 3800);
 }
 
-/* ============ DIŞA AKTAR ============ */
 function exportChat(){
   const c = activeConv();
   if(!c||!c.msgs.length) return toast('Sohbet boş','warn');
   const md = `# ${c.title}\n\n_${new Date(c.created).toLocaleString('tr-TR')}_\n\n` +
-    c.msgs.map(m => {
-      const role = m.role==='user'?'👤 **Sen**':m.role==='assistant'?'🤖 **Asistan**':'';
-      return `## ${role}\n\n${m.content}\n`;
-    }).join('\n---\n\n');
-  download(c.title.replace(/[^\w\-]+/g,'_')+'.md', md, 'text/markdown');
-}
-function download(name, content, mime){
-  const blob = new Blob([content], {type:mime});
-  const a = document.createElement('a');
-  a.href = URL.createObjectURL(blob);
-  a.download = name;
-  a.click();
+    c.msgs.map(m => { const role = m.role==='user'?'👤 **Sen**':m.role==='assistant'?'🤖 **Asistan**':''; return `## ${role}\n\n${m.content}\n`; }).join('\n---\n\n');
+  const blob = new Blob([md], {type:'text/markdown'}); const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob); a.download = c.title.replace(/[^\w\-]+/g,'_')+'.md'; a.click();
   setTimeout(()=>URL.revokeObjectURL(a.href), 1000);
 }
 
-/* ============ EVENT HANDLERS ============ */
-// Sidebar toggle
 $('hamb').addEventListener('click', ()=>{ $('sidebar').classList.add('open'); $('overlay').classList.add('show'); });
 $('overlay').addEventListener('click', ()=>{ $('sidebar').classList.remove('open'); $('overlay').classList.remove('show'); });
-
-// Search
 $('convSearch').addEventListener('input', renderSidebar);
-
-// Conv list
 $('convList').addEventListener('click', e=>{
   const del = e.target.closest('[data-del]');
   if(del){ e.stopPropagation(); if(confirm('Bu sohbet silinsin mi?')){ S.convs = S.convs.filter(x=>x.id!==del.dataset.del); if(S.activeId===del.dataset.del) S.activeId = S.convs[0]?.id||null; saveConvs(); saveActive(); renderSidebar(); renderMessages(); renderHeader(); } return; }
   const conv = e.target.closest('[data-cid]');
   if(conv){ S.activeId = conv.dataset.cid; saveActive(); renderSidebar(); renderMessages(); renderHeader(); $('sidebar').classList.remove('open'); $('overlay').classList.remove('show'); }
 });
-
-// Buttons
 document.addEventListener('click', e=>{
   const b = e.target.closest('[data-act]'); if(!b) return;
   const a = b.dataset.act;
-  if(a==='newChat'){
-    newConv(); renderSidebar(); renderMessages(); renderHeader();
-    $('sidebar').classList.remove('open'); $('overlay').classList.remove('show');
-    $('ta').focus();
-  }
+  if(a==='newChat'){ newConv(); renderSidebar(); renderMessages(); renderHeader(); $('sidebar').classList.remove('open'); $('overlay').classList.remove('show'); $('ta').focus(); }
   else if(a==='openSettings') openSettings();
   else if(a==='exportChat') exportChat();
   else if(a==='clearChat'){ const c = activeConv(); if(c && confirm('Bu sohbetin mesajları silinsin mi?')){ c.msgs=[]; saveConvs(); renderMessages(); renderHeader(); } }
@@ -676,43 +535,30 @@ document.addEventListener('click', e=>{
   else if(a==='delMsg'){ const c = activeConv(); if(c){ c.msgs.splice(+b.dataset.i,1); saveConvs(); renderMessages(); renderHeader(); } }
   else if(a==='regen'){ if(!S.busy && S.lastUserMsg){ regenerate(); } }
 });
-
-// Empty state examples
 $('messages').addEventListener('click', e=>{
   const ex = e.target.closest('[data-ex]');
   if(ex){ $('ta').value = ex.dataset.ex; autoResize(); updateSendBtn(); $('ta').focus(); }
 });
-
-// Attach
 $('attachBtn').addEventListener('click', ()=> $('fileInput').click());
 $('fileInput').addEventListener('change', e=>{ addFiles(e.target.files); e.target.value=''; });
 $('attachBar').addEventListener('click', e=>{
   const d = e.target.closest('[data-attach-del]');
   if(d){ S.attachments.splice(+d.dataset.attachDel,1); renderAttachments(); updateSendBtn(); renderHeader(); }
 });
-
-// Textarea
 $('ta').addEventListener('input', ()=>{ autoResize(); updateSendBtn(); });
 $('ta').addEventListener('keydown', e=>{
   if(e.key==='Enter' && !e.shiftKey && !e.isComposing){
-    // on mobile keep Enter as newline if no physical keyboard intent? Use Ctrl/Cmd+Enter on mobile
     if(window.matchMedia('(max-width:768px)').matches && !e.ctrlKey && !e.metaKey) return;
-    e.preventDefault();
-    if(!$('sendBtn').disabled) send();
+    e.preventDefault(); if(!$('sendBtn').disabled) send();
   }
 });
-
-// Send
 $('sendBtn').addEventListener('click', ()=> send());
 
-// Regenerate
 async function regenerate(){
   const c = activeConv(); if(!c) return;
-  // find last user msg
   let lastU = -1;
   for(let i=c.msgs.length-1;i>=0;i--) if(c.msgs[i].role==='user'){ lastU=i; break; }
   if(lastU<0) return;
-  // drop trailing assistant messages
   while(c.msgs.length-1>lastU) c.msgs.pop();
   saveConvs(); renderMessages(); renderHeader();
   S.busy = true; S.error='';
@@ -731,70 +577,40 @@ async function regenerate(){
   renderMessages(); renderHeader(); updateSendBtn();
 }
 
-// Modal backdrop
-$('modalRoot').addEventListener('click', e=>{
-  if(e.target.closest('[data-close]')) closeModal();
-});
+$('modalRoot').addEventListener('click', e=>{ if(e.target.closest('[data-close]')) closeModal(); });
 
-/* ============ DRAG & DROP ============ */
 let dragDepth = 0;
 document.addEventListener('dragenter', e=>{
   if(!e.dataTransfer?.types?.includes('Files')) return;
   dragDepth++;
-  if(dragDepth===1){
-    const ov = document.createElement('div');
-    ov.className='drop-overlay'; ov.id='dropOv'; ov.textContent='📁 Dosyayı bırak → AI analiz edecek';
-    document.body.appendChild(ov);
-  }
+  if(dragDepth===1){ const ov=document.createElement('div'); ov.className='drop-overlay'; ov.id='dropOv'; ov.textContent='📁 Dosyayı bırak → AI analiz edecek'; document.body.appendChild(ov); }
 });
-document.addEventListener('dragleave', e=>{
-  dragDepth = Math.max(0, dragDepth-1);
-  if(dragDepth===0) document.getElementById('dropOv')?.remove();
-});
+document.addEventListener('dragleave', ()=>{ dragDepth=Math.max(0,dragDepth-1); if(dragDepth===0) document.getElementById('dropOv')?.remove(); });
 document.addEventListener('dragover', e=>{ e.preventDefault(); });
 document.addEventListener('drop', e=>{
-  e.preventDefault();
-  dragDepth = 0;
-  document.getElementById('dropOv')?.remove();
+  e.preventDefault(); dragDepth=0; document.getElementById('dropOv')?.remove();
   if(e.dataTransfer?.files?.length) addFiles(e.dataTransfer.files);
 });
 
-/* ============ TEMA ============ */
 function applyTheme(){
   const t = localStorage.getItem(K.theme) || 'dark';
   document.documentElement.classList.toggle('light', t==='light');
-  const tc = document.querySelector('meta[name=theme-color]');
-  if(tc) tc.setAttribute('content', t==='light'?'#f7f1e6':'#130a0c');
+  const tc = document.querySelector('meta[name=theme-color]'); if(tc) tc.setAttribute('content', t==='light'?'#f7f1e6':'#130a0c');
 }
-// Tema toggle — ayarlar modalında da ekleyebiliriz ama şimdilik klavyeden Ctrl+T
 document.addEventListener('keydown', e=>{
   if((e.ctrlKey||e.metaKey) && e.key==='t'){
-    e.preventDefault();
-    const t = localStorage.getItem(K.theme)==='light'?'dark':'light';
+    e.preventDefault(); const t = localStorage.getItem(K.theme)==='light'?'dark':'light';
     localStorage.setItem(K.theme, t); applyTheme();
   }
 });
 
-/* ============ BAŞLAT ============ */
 loadAll();
 applyTheme();
 if(!S.convs.length){ newConv(); }
-renderSidebar();
-renderMessages();
-renderHeader();
-renderAttachments();
-updateSendBtn();
+renderSidebar(); renderMessages(); renderHeader(); renderAttachments(); updateSendBtn();
 $('ta').focus();
 
-// İlk açılışta ayar uyarısı
-if(!S.settings.key){
-  setTimeout(()=>{
-    toast('İlk kullanım: ⚙️ Ayarlar > API anahtarı gerekli','warn');
-    // küçük gecikmeyle ayarları aç
-    setTimeout(openSettings, 700);
-  }, 400);
-}
-
+// Anahtar gömülü olduğu için uyarı gösterme; sadece API çalışmazsa hata yakala
 window.addEventListener('beforeunload', ()=>{ saveConvs(); saveSettings(); });
 </script>
 </body>
